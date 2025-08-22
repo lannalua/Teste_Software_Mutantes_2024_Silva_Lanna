@@ -67,15 +67,7 @@ def test_create_task_empty_json():
     assert response.status_code == 500
 
 def test_get_tasks_empty():
-    response = requests.get(f"{BASE_URL}/tasks")
-    print(response)
-    if response.status_code == 200:
-        tasks_data = response.json()
-        print(tasks_data)
-        for task in tasks_data["tasks"]:
-            print(task["id"])
-            delete_response = requests.delete(f"{BASE_URL}/tasks/{task['id']}")
-            print(delete_response.json())
+    tasks.clear()
     
     response = requests.get(f"{BASE_URL}/tasks")
     assert response.status_code == 200
