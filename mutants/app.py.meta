@@ -1,0 +1,18 @@
+{
+    "exit_code_by_key": {
+        "app.x\u01c1Task\u01c1__init____mutmut_1": 33,
+        "app.x\u01c1Task\u01c1__init____mutmut_2": 33,
+        "app.x\u01c1Task\u01c1__init____mutmut_3": 33,
+        "app.x\u01c1Task\u01c1__init____mutmut_4": 33,
+        "app.x\u01c1Task\u01c1__init____mutmut_5": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_1": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_2": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_3": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_4": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_5": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_6": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_7": 33,
+        "app.x\u01c1Task\u01c1to_dict__mutmut_8": 33
+    },
+    "hash_by_function_name": {}
+}

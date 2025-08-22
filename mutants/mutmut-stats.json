@@ -1,0 +1,18 @@
+{
+    "tests_by_mangled_function_name": {},
+    "duration_by_test": {
+        "test_app.py::test_create_task": 0.000429961000008916,
+        "test_app.py::test_get_tasks": 0.00048823900033312384,
+        "test_app.py::test_get_task": 0.0004228329999023117,
+        "test_app.py::test_update_task": 0.0004154959997322294,
+        "test_app.py::test_delete_task": 0.0003667910000331176,
+        "test_app.py::test_create_task_missing_title": 0.0004982320001545304,
+        "test_app.py::test_update_task_invalid_payload": 0.0003484829999251815,
+        "test_app.py::test_main_block_executes": 0.0003459660001681186,
+        "test_app.py::test_get_task_not_found": 0.00032227700012299465,
+        "test_app.py::test_update_task_not_found": 0.0003131929997834959,
+        "test_app.py::test_update_task_missing_completed": 0.0003444979997766495,
+        "test_app.py::test_delete_task_not_found": 0.00034359099981884356
+    },
+    "stats_time": 0.690650207
+}
