@@ -1,4 +1,20 @@
-# Tutorial: Teste de mutação usando o Mutmut
+# Testes de Mutação
+
+**Participantes da equipe:**
+
+- Heitor Saulo Dantas Santos
+- Itor Carlos Souza Queiroz
+- Lanna Luara Novaes Silva
+- Lavínia Louise Rosa Santos
+- Rômulo Menezes De Santana
+
+---
+
+O objetivo desse projeto é demonstrar a aplicação do roteiro do vídeo do Youtube detalhado abaixo “Introdução ao teste de mutação em Python com a ferramenta mutmut” no projeto “Task Manegement” selecionado de um repositório do GitHub para analisar os resultados do uso de testes de mutação na aplicação escolhida.
+
+* Repositório da Aplicação Escolhida: https://github.com/carloshenriquefs/task-management/tree/main
+
+## Tutorial: Teste de mutação usando o Mutmut
 
 Os detalhes do tutorial foram retirados do vídeo: [Link do vídeo](https://www.youtube.com/watch?v=FbMpoVOorFI) e utilizando exemplos presentes no repositório [cal_python](<https://github.com/stevaoaa/cal_python>).
 Obs: a versão do Mutmut utilizada no vídeo está ultrapassada e uma versão mais recente foi utilizada (Mutmut, version 3.3.1). Alguns comandos utilizados no vídeo foram modificados ou removidos. Seguindo a documentação do Mutmut precisar ser executado em sistemas com fork support, ou seja, sistemas UNIX.
