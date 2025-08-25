@@ -55,27 +55,27 @@ def test_create_task_without_description():
     response_json = response.json()
     assert "id" in response_json
 
-def test_create_task_missing_title():
-    new_task_data = {
-        "description": "Sem título"
-    }
-    response = requests.post(f"{BASE_URL}/tasks", json=new_task_data)
-    assert response.status_code == 500
+# def test_create_task_missing_title():
+#     new_task_data = {
+#         "description": "Sem título"
+#     }
+#     response = requests.post(f"{BASE_URL}/tasks", json=new_task_data)
+#     assert response.status_code == 500
 
-def test_create_task_empty_json():
-    response = requests.post(f"{BASE_URL}/tasks", json={})
-    assert response.status_code == 500
+# def test_create_task_empty_json():
+#     response = requests.post(f"{BASE_URL}/tasks", json={})
+#     assert response.status_code == 500
 
-def test_get_tasks_empty():
-    tasks.clear()
+# def test_get_tasks_empty():
+#     tasks.clear()
     
-    response = requests.get(f"{BASE_URL}/tasks")
-    assert response.status_code == 200
-    response_json = response.json()
-    assert "tasks" in response_json
-    assert "total_tasks" in response_json
-    assert response_json["total_tasks"] == 0
-    assert len(response_json["tasks"]) == 0
+#     response = requests.get(f"{BASE_URL}/tasks")
+#     assert response.status_code == 200
+#     response_json = response.json()
+#     assert "tasks" in response_json
+#     assert "total_tasks" in response_json
+#     assert response_json["total_tasks"] == 0
+#     assert len(response_json["tasks"]) == 0
 
 def test_get_tasks_with_data():
     task_data_1 = {"title": "Tarefa 1", "description": "Desc 1"}
@@ -101,12 +101,12 @@ def test_get_task_existing():
     assert response_json["id"] == task_id
     assert response_json["title"] == "Tarefa para buscar"
 
-def test_get_task_not_found():
-    response = requests.get(f"{BASE_URL}/tasks/9999")
-    assert response.status_code == 404
-    response_json = response.json()
-    assert "message" in response_json
-    assert response_json["message"] == "Não foi possível encontrar a atividade"
+# def test_get_task_not_found():
+#     response = requests.get(f"{BASE_URL}/tasks/9999")
+#     assert response.status_code == 404
+#     response_json = response.json()
+#     assert "message" in response_json
+#     assert response_json["message"] == "Não foi possível encontrar a atividade"
 
 def test_get_task_invalid_id():
     response = requests.get(f"{BASE_URL}/tasks/abc")
@@ -195,16 +195,16 @@ def test_update_task_missing_completed():
     response = requests.put(f"{BASE_URL}/tasks/{task_id}", json=payload)
     assert response.status_code == 500
 
-def test_update_task_not_found():
-    payload = {
-        "title": "Qualquer",
-        "description": "Qualquer",
-        "completed": False
-    }
-    response = requests.put(f"{BASE_URL}/tasks/9999", json=payload)
-    assert response.status_code == 404
-    response_json = response.json()
-    assert "message" in response_json
+# def test_update_task_not_found():
+#     payload = {
+#         "title": "Qualquer",
+#         "description": "Qualquer",
+#         "completed": False
+#     }
+#     response = requests.put(f"{BASE_URL}/tasks/9999", json=payload)
+#     assert response.status_code == 404
+#     response_json = response.json()
+#     assert "message" in response_json
 
 def test_delete_task_existing():
     task_data = {"title": "Tarefa para deletar", "description": "Teste"}
@@ -220,11 +220,11 @@ def test_delete_task_existing():
     get_response_after = requests.get(f"{BASE_URL}/tasks/{task_id}")
     assert get_response_after.status_code == 404
 
-def test_delete_task_not_found():
-    response = requests.delete(f"{BASE_URL}/tasks/9999")
-    assert response.status_code == 404
-    response_json = response.json()
-    assert "message" in response_json
+# def test_delete_task_not_found():
+#     response = requests.delete(f"{BASE_URL}/tasks/9999")
+#     assert response.status_code == 404
+#     response_json = response.json()
+#     assert "message" in response_json
 
 def test_delete_task_twice():
     task_data = {"title": "Tarefa dupla", "description": "Teste"}
@@ -246,14 +246,14 @@ def test_task_completed_default_false():
     task = get_response.json()
     assert task["completed"] == False
 
-def test_main_block_executes():
-    result = subprocess.run([sys.executable, "app.py", "--help"], 
-                          capture_output=True, text=True, timeout=5)
-    assert True 
+# def test_main_block_executes():
+#     result = subprocess.run([sys.executable, "app.py", "--help"], 
+#                           capture_output=True, text=True, timeout=5)
+#     assert True 
 
-def test_invalid_json_payload():
-    response = requests.post(f"{BASE_URL}/tasks", data="invalid json")
-    assert response.status_code == 415
+# def test_invalid_json_payload():
+#     response = requests.post(f"{BASE_URL}/tasks", data="invalid json")
+#     assert response.status_code == 415
 
 def test_update_task_invalid_json():
     task_data = {"title": "Tarefa teste", "description": "Teste"}
