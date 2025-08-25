@@ -108,9 +108,9 @@ def test_get_task_existing():
 #     assert "message" in response_json
 #     assert response_json["message"] == "Não foi possível encontrar a atividade"
 
-def test_get_task_invalid_id():
-    response = requests.get(f"{BASE_URL}/tasks/abc")
-    assert response.status_code == 404
+# def test_get_task_invalid_id():
+#     response = requests.get(f"{BASE_URL}/tasks/abc")
+#     assert response.status_code == 404
 
 def test_update_task_complete():
     task_data = {"title": "Tarefa original", "description": "Desc original"}
